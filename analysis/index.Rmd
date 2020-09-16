@@ -9,3 +9,7 @@ editor_options:
 ---
 
 Welcome to my research website.
+
+* [Teeth growth analysis](teeth.html)
+
+
