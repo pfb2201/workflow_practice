@@ -1,0 +1,39 @@
+---
+title: "teeth"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+import t eeth.csv
+```{r import data}
+teeth = read.csv('data/teeth.csv',row.names=1)
+head(teeth)
+```
+
+## Including Plots
+
+make some boxplots vvv
+
+```{r boxplots}
+boxplot(len~dose, data=teeth)
+boxplot(len~supp, data=teeth)
+boxplot(len~dose+supp, data=teeth)
+
+```
+
+now we're going to do a mini permutation
+
+```{r mini permutation}
+mean(teeth$len[teeth$supp == 'OJ']) - mean(teeth$len[teeth$supp == "VC"])
+supp_perm = sample(teeth$supp)
+
+mean(teeth$len[supp_perm == 'OJ']) - mean(teeth$len[supp_perm == 'VC'])
+
+
+```
+
