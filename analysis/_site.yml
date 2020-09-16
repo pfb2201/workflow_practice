@@ -1,7 +1,7 @@
-name: "workflow_practice"
+name: workflow_practice
 output_dir: ../docs
 navbar:
-  title: "workflow_practice"
+  title: workflow_practice
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fa-github
+    text: Source code
+    href: https://github.com/pfb2201/workflow_practice
 output:
   workflowr::wflow_html:
     toc: yes
